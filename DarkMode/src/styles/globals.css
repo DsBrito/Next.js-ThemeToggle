@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+main {
+  --text: #000000;
+  --text2: #333333;
+  --bg2: #eeeeee;
+  --bg: #ffffff;
+}
+main.dark {
+  --text: #ffffff;
+  --text2: #eeeeee;
+  --bg2: #333333;
+  --bg: hsl(0, 0%, 0%);
+}
+@media (prefers-color-scheme: dark) {
+  main {
+    --text: #ffffff;
+    --text2: #eeeeee;
+    --bg2: #333333;
+    --bg: #000000;
+  }
+}
+
+main {
+  background: var(--bg2);
+  color: var(--text2);
+  min-height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a {
+  color: var(--text2);
+  display: block;
+  padding: 20px 10px;
+}
