@@ -1,0 +1,36 @@
+/* ./styles/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Nossas novas variáveis */
+:root {
+  --color-body: #111827; /*  escuro */
+  --color-background: #f9fafb; /*  claro */
+}
+
+[data-theme="dark"] {
+  --color-body: #f9fafb; /*  claro */
+  --color-background: #111827; /*  escuro */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-body;
+  }
+}
+
+
+table {
+  text-indent: 0;
+  border-color: inherit
+}
+
+.flex {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between
+}
+
+
